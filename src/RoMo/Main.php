@@ -24,7 +24,7 @@ use pocketmine\event\player\PlayerChatEvent;
 class Main extends PluginBase implements Listener{
 	public function onEnable(){
 		@mkdir($this->getDataFolder());
-		$this->con = new Config($this->getDataFolder(). "config.yml", Config::YAML, ["word" => []]);
+		$this->con = new Config($this->getDataFolder(). "config.yml", Config::YAML, ["word" => ["로모"]]);
 		$this->conall = $this->con->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
