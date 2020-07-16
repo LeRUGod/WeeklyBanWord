@@ -1,0 +1,15 @@
+name: banword
+main: RoMo\Main
+author: "RoMo_Official"
+version: "1.0.0"
+api:
+  - 3.0.0
+
+commands:
+  금지어변경:
+    permission: Rnotalk.commands
+    default: OP
+
+permissions:
+  practice.commands:
+    default: OP
