@@ -51,7 +51,7 @@ class Main extends PluginBase implements Listener{
 		$chat = $event->getMessage();
 		$player = $event->getPlayer();
 		$name = $player->getName();
-		if($this->conall["word"][0] === $chat){
+		if(str_replace($this->conall["word"][0],"",$chat) !== false){
 			$event->setCancelled();
 			$player->kick("이번주 금지어에 걸리셨습니다! 금지어 : " . $this->conall["word"][0]);
 			$this->getServer()->broadcastMessage($name . "님이 이번주 §c금지어§f에 §6걸리셨습니다!");
